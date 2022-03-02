@@ -1,30 +1,10 @@
 @Library('pipeline-commons') _
 
-pipeline { 
-    agent any 
 
-    options {
-        skipStagesAfterUnstable()
-    }
-    triggers {
-        pollSCM('H/2 * * * *')
-    }
-    stages {
-        stage('Run Sh') { 
-            steps {
-                checkout scm
-                sh 'env'
-            }
-        }
-        stage('run aws cli'){
-            steps {
-                sh 'aws --version' 
-            }
-        }
-        stage('De4ploy') {
-            steps {
-                awsCliReboot(pipelineParams.instanceId)    
-            }
-        }
-    }
+
+rebootEC2Pipeline {
+    schedule: "*/5 0 0 0 0"   /*cron format */,
+    credentialIdAws: "AWS_JENKINS_CREDENTIALS",
+    instanceId: "",
+    awsRegion: "us-east-1"    
 }
