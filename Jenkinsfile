@@ -1,3 +1,5 @@
+@Library('pipeline-commons') _
+
 pipeline { 
     agent any 
 
@@ -21,7 +23,7 @@ pipeline {
         }
         stage('De4ploy') {
             steps {
-                sh 'echo fim'
+                awsCliReboot(pipelineParams.instanceId)    
             }
         }
     }
