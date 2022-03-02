@@ -2,9 +2,8 @@
 
 
 
-rebootEC2Pipeline {
-    
-    credentialIdAws: "AWS_JENKINS_CREDENTIALS",
-    instanceId: "",
+rebootEC2Pipeline {    
+    credentialIdAws: "AWS_JENKINS_CREDENTIALS"
+    instanceId: ""
     awsRegion: "us-east-1"    
 }
