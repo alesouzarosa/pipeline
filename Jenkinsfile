@@ -3,7 +3,7 @@
 
 
 rebootEC2Pipeline {
-    schedule: "*/5 0 0 0 0"   /*cron format */,
+    schedule: "1 * * * *"   /*cron format */,
     credentialIdAws: "AWS_JENKINS_CREDENTIALS",
     instanceId: "",
     awsRegion: "us-east-1"    
