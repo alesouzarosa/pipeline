@@ -5,7 +5,7 @@
 cmdEC2Pipeline {  
     objeto: """
             */2 * * * * %instanceId=Hola;awsRegion=us-east-1;comando=reboot
-            */2 * * * * %instanceId=Hola;awsRegion=Plus-east-1uto;comando=reboot
+            */2 * * * * %instanceId=Hola;awsRegion=us-east-1;comando=reboot
             """
 
     
