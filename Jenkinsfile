@@ -2,9 +2,17 @@
 
 
 
-rebootEC2Pipeline {    
-    schedule: "0 12,20 */1 * *"
+rebootEC2Pipeline {  
+
+    objeto: """
+            */2 * * * * %instanceId=Hola;awsRegion=us-east-1;comando=reboot
+            */2 * * * * %instanceId=Hola;awsRegion=Plus-east-1uto;comando=reboot
+            """
+
+    
     credentialIdAws: "AWS_JENKINS_CREDENTIALS"
-    instanceId: ""
-    awsRegion: "us-east-1"    
+
 }
+
+
+//objetos: instanceID, operation, cron format, region 
