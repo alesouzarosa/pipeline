@@ -2,7 +2,7 @@
 
 
 
-rebootEC2Pipeline {  
+cmdEC2Pipeline {  
 
     objeto: """
             */2 * * * * %instanceId=Hola;awsRegion=us-east-1;comando=reboot
@@ -15,4 +15,4 @@ rebootEC2Pipeline {
 }
 
 
-//objetos: instanceID, operation, cron format, region 
+//objetos: instanceID, operation, cron format, region sdsdsdsdsddsd
