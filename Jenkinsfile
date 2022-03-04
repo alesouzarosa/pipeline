@@ -3,10 +3,11 @@
 
 
 cmdEC2Pipeline {  
-    objeto: """
-            */2 * * * * %instanceId=Hola;awsRegion=us-east-1;comando=reboot
-            */2 * * * * %instanceId=Hola;awsRegion=us-east-1;comando=reboot
-            """
+    objetoParameters:[
+        string(name: 'instaceId', defaultValue: 'i-123456789', description: 'Which planet are we on?'),
+        string(name: 'awsRegion', defaultValue: 'us-east-1', description: 'Which planet are we on?'),
+        string(name: 'command', defaultValue: 'Hello', description: 'How shall we greet?')   
+    ] 
 
     
     credentialIdAws: "AWS_JENKINS_CREDENTIALS"
